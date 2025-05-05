@@ -19,8 +19,10 @@ depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade() -> None:
-    op.add_column("posts", sa.Column("published", sa.Boolean(), server_default="TRUE"), nullable=False)
-    op.add_column("posts", sa.Column("created_at", sa.TIMESTAMP(timezone=True), server_default=sa.text('now()'), nullable=False),)    
+    op.add_column("posts", sa.Column("published", sa.Boolean(), server_default="TRUE", nullable=False))
+    op.add_column("posts", sa.Column("created_at", sa.TIMESTAMP(timezone=True), server_default=sa.text('now()'), nullable=False))
+
+   
     """Upgrade schema."""
     pass
 
