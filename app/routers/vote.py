@@ -4,8 +4,8 @@ from .. import schemas, models, oauth2, database
 
 
 router = APIRouter(
-    prefix="/vole",
-    tags=["Vole"]
+    prefix="/vote",
+    tags=["Vote"]
 )
 
 
